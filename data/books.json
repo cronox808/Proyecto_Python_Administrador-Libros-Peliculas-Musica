@@ -1,0 +1,14 @@
+[
+    {
+      "titulo": "Cien años de soledad",
+      "autor": "Gabriel García Márquez",
+      "genero": "Realismo mágico",
+      "valoracion": 5
+    },
+    {
+      "titulo": "1984",
+      "autor": "George Orwell",
+      "genero": "Distopía",
+      "valoracion": 4.7
+    }
+  ]
