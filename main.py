@@ -1,34 +1,55 @@
-from design.allMenus import design, adNewElementMenu, seeByCategory, saveAndLoadCollecton, SearhElement,EditElement, deletElement, SeeAllItems, saveAndLoadCollecton
-from logic.books import addNewBook
-from logic.movie import addNewMovie
+from design.allMenus import addNewElementMenu, SeeAllItems, SearhElement, EditElement, deletElement, seeByCategory, saveAndLoadCollecton 
+print("""
+===========================================
+        Administrador de Colección
+===========================================
+1. Añadir un Nuevo Elemento
+2. Ver Todos los Elementos
+3. Buscar un Elemento
+4. Editar un Elemento
+5. Eliminar un Elemento
+6. Ver Elementos por Categoría
+7. Guardar y Cargar Colección
+8. Salir
+===========================================
+Selecciona una opción (1-8): """)
 
-match design():
-        case 1:
-           adNewElementMenu()
-        case 2:
-            SeeAllItems()
-        case 3:
-            seeByCategory()
-        case 4:
-            EditElement()
-        case 5:
-            deletElement()
-        case 6:
-            seeByCategory()
-        case 7:
-            saveAndLoadCollecton()
-        case  8:
-            print("Adios")
-        case _:
-            print("No enender tu elexion, por favor marque una opcion valida, no sea pendejo")
+opc = int(input())
 
-match adNewElementMenu():
+if opc == 1:
+    match addNewElementMenu():
         case 1:
-           addNewBook()
-        case 2:
-            addNewMovie()
-        case 3:
-            
-        case 4:
-            print("vale")
-            design()
+           print("libro")
+elif opc == 2 :
+    match SeeAllItems():
+        case 1:
+            print("vas a ver todos lo libros")
+elif opc == 3 :
+    match SearhElement:
+        case 1:
+            print("busacr")
+elif opc == 4 :
+    match EditElement:
+        case 1:
+            print("editar titulo")
+
+elif opc == 5 :
+    match deletElement:
+        case 1:
+            print("eliminar pedido")
+elif opc == 6 :
+    match seeByCategory :
+        case 1:
+            print("ver libros")
+elif opc == 7 :
+    match saveAndLoadCollecton:
+        case 1:
+            print("guardar colecion")
+elif opc == 8:
+    print("chao")
+else:
+    print("¿eres tonto?") 
+
+
+
+
