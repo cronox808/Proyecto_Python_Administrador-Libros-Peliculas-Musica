@@ -1,5 +1,6 @@
 from design.allMenus import design, adNewElementMenu, seeByCategory, saveAndLoadCollecton, SearhElement,EditElement, deletElement, SeeAllItems, saveAndLoadCollecton
 from logic.books import addNewBook
+from logic.movie import addNewMovie
 
 match design():
         case 1:
@@ -25,18 +26,9 @@ match adNewElementMenu():
         case 1:
            addNewBook()
         case 2:
-            addNewMovie
+            addNewMovie()
         case 3:
             
         case 4:
-           
-        case 5:
-            
-        case 6:
-            
-        case 7:
-            
-        case  8:
-            
-        case _:
-            
+            print("vale")
+            design()
