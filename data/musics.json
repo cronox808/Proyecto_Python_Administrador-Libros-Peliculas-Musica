@@ -12,9 +12,15 @@
         "valoracion": 4.9
     },
     {
-        "titulo": "nano love",
-        "artista": "meganeko",
+        "titulo": "operatio evolution",
+        "artista": "dimrain47",
         "genero": "dustep",
+        "valoracion": 5.0
+    },
+    {
+        "titulo": "angst",
+        "artista": "ramnstain",
+        "genero": "metal industria",
         "valoracion": 5.0
     }
 ]

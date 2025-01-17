@@ -1,9 +1,10 @@
+
 import json
 #funcion para guardar u7n nuevo libro
 def dateBooks():
         #leer el archivo jso existente(contiene productos)
         with open('data/books.json', "r")as file:
-            book = json.load(file)
+           book = json.load(file)
         #pedir al usuario detalles
         print("Introduce los datos del nuevo libro: ")
         titulo = input("Introduce el titulo del libro: ")
@@ -61,7 +62,7 @@ def dateMovies():
 
 def dateMusic():
         #leer el archivo jso existente(contiene productos)
-        with open('data/music.json', "r")as file:
+        with open('data/musics.json', "r")as file:
             music = json.load(file)
         #pedir al usuario detalles
         print("Introduce los datos de la nueva cancion: ")

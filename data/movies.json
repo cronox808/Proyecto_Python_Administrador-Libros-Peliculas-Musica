@@ -16,5 +16,17 @@
         "director": "marvel",
         "genero": "accion",
         "valoracion": 5.0
+    },
+    {
+        "titulo": "sonic",
+        "director": "no c",
+        "genero": "infantil",
+        "valoracion": 5.0
+    },
+    {
+        "titulo": "transformer",
+        "director": "no c",
+        "genero": "accion",
+        "valoracion": 3.0
     }
 ]
