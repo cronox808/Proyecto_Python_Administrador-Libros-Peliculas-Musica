@@ -1,6 +1,7 @@
 from design.allMenus import addNewElementMenu, SeeAllItems, SearhElement, EditElement, deletElement, seeByCategory, saveAndLoadCollecton 
 from logic.addMultimedia import dateBooks, dateMovies, dateMusic
 from design.table import tableBooks,tableMovies, tableMusic
+from design.searhItem import searhBook
 while(True):
     print("""
 ===========================================
@@ -57,9 +58,10 @@ Selecciona una opción (1-8): """)
                 break
 
     elif opc == 3 :
-        match SearhElement():
-            case 1:
-                print("busacr")
+        while(True):
+            match SearhElement():
+                case 1:
+                    searhBook()
     elif opc == 4 :
         match EditElement():
             case 1:
