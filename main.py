@@ -1,4 +1,5 @@
 from design.allMenus import addNewElementMenu, SeeAllItems, SearhElement, EditElement, deletElement, seeByCategory, saveAndLoadCollecton 
+from logic.books import dateBooks
 print("""
 ===========================================
         Administrador de Colección
@@ -19,30 +20,30 @@ opc = int(input())
 if opc == 1:
     match addNewElementMenu():
         case 1:
-           print("libro")
+           dateBooks()
 elif opc == 2 :
     match SeeAllItems():
         case 1:
             print("vas a ver todos lo libros")
 elif opc == 3 :
-    match SearhElement:
+    match SearhElement():
         case 1:
             print("busacr")
 elif opc == 4 :
-    match EditElement:
+    match EditElement():
         case 1:
             print("editar titulo")
 
 elif opc == 5 :
-    match deletElement:
+    match deletElement():
         case 1:
             print("eliminar pedido")
 elif opc == 6 :
-    match seeByCategory :
+    match seeByCategory():
         case 1:
             print("ver libros")
 elif opc == 7 :
-    match saveAndLoadCollecton:
+    match saveAndLoadCollecton():
         case 1:
             print("guardar colecion")
 elif opc == 8:
