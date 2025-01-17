@@ -1,0 +1,94 @@
+import json
+#funcion para guardar u7n nuevo libro
+def dateBooks():
+        #leer el archivo jso existente(contiene productos)
+        with open('data/books.json', "r")as file:
+            book = json.load(file)
+        #pedir al usuario detalles
+        print("Introduce los datos del nuevo libro: ")
+        titulo = input("Introduce el titulo del libro: ")
+        autor = input("Introduce el nombre del autor: ")
+        genero = input("Introduce el genero del libro: ")
+        valoracion = input("Introduce la valoracion del libro: ")
+        valoracion = float(valoracion) if valoracion.strip() else None
+     #crear un diccionario para la pelicula
+        NewBook = {
+        "titulo": titulo,
+        "autor": autor,
+        "genero": genero,
+        "valoracion": valoracion
+        }
+        #agregar el nuevo item(libro) a la lista de book
+        book.append(NewBook)
+        #guardar los cambieo en el archivo JSON
+        with open('data/books.json', 'w') as file:
+              str(book).encode('utf-8')
+              comvertjson = json.dumps(book, indent=4, ensure_ascii = False)
+              file.write(comvertjson)
+        print("libro agregado exitosamente")
+              
+
+
+#funcion para guardar u7n nuevo libro
+def dateMovies():
+        #leer el archivo jso existente(contiene productos)
+        with open('data/movies.json', "r")as file:
+            movie = json.load(file)
+        #pedir al usuario detalles
+        print("Introduce los datos de la nueva pelicula: ")
+        titulo = input("Introduce el titulo de la pelicula: ")
+        director = input("Introduce el nombre del director de la pelicula: ")
+        genero = input("Introduce el genero de la pelicula: ")
+        valoracion = input("Introduce la valoracion de la pelicula: ")
+        valoracion = float(valoracion) if valoracion.strip() else None
+     #crear un diccionario para la pelicula
+        NewMovie = {
+        "titulo": titulo,
+        "director": director,
+        "genero": genero,
+        "valoracion": valoracion
+        }
+        #agregar el nuevo item(libro) a la lista de book
+        movie.append(NewMovie)
+        #guardar los cambieo en el archivo JSON
+        with open('data/movies.json', 'w') as file:
+              str(movie).encode('utf-8')
+              comvertjson = json.dumps(movie, indent=4, ensure_ascii = False)
+              file.write(comvertjson)
+        print("libro agregado exitosamente")
+        
+
+
+def dateMusic():
+        #leer el archivo jso existente(contiene productos)
+        with open('data/music.json', "r")as file:
+            music = json.load(file)
+        #pedir al usuario detalles
+        print("Introduce los datos de la nueva cancion: ")
+        titulo = input("Introduce el titulo de la cancion: ")
+        artista = input("Introduce el nombre del artista: ")
+        genero = input("Introduce el genero de la cancion: ")
+        valoracion = input("Introduce la valoracion de la cancion: ")
+        valoracion = float(valoracion) if valoracion.strip() else None
+     #crear un diccionario para la pelicula
+        NewMusic = {
+        "titulo": titulo,
+        "artista": artista,
+        "genero": genero,
+        "valoracion": valoracion
+        }
+        #agregar el nuevo item(libro) a la lista de book
+        music.append(NewMusic)
+        #guardar los cambieo en el archivo JSON
+        with open('data/musics.json', 'w') as file:
+              str(music).encode('utf-8')
+              comvertjson = json.dumps(music, indent=4, ensure_ascii = False)
+              file.write(comvertjson)
+        print("libro agregado exitosamente")
+        
+
+
+
+
+
+

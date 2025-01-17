@@ -1,5 +1,5 @@
 from design.allMenus import addNewElementMenu, SeeAllItems, SearhElement, EditElement, deletElement, seeByCategory, saveAndLoadCollecton 
-from logic.books import dateBooks
+from logic.addMultimedia import dateBooks, dateMovies, dateMusic
 print("""
 ===========================================
         Administrador de Colección
@@ -21,6 +21,10 @@ if opc == 1:
     match addNewElementMenu():
         case 1:
            dateBooks()
+        case 2:
+            dateMovies()
+        case 3:
+            dateMusic()
 elif opc == 2 :
     match SeeAllItems():
         case 1:
