@@ -1,7 +1,44 @@
 import json
 from tabulate import tabulate
 def tableBooks():
-    with open('data/books.json','r') as file:
-        data = json. load(file)
+    while(True):
+        with open('data/books.json','r') as file:
+            data = json. load(file)
 
-    print(tabulate(data,headers="keys", tablefmt="grid"))
+        print(tabulate(data,headers="keys", tablefmt="grid"))
+        back = input(
+                "¿Deseas volver? (s/n)"
+                )
+        if back.lower() == "s":
+                break#se regresa
+        else:
+             continue
+                
+def tableMovies():
+    while(True):
+        with open('data/movies.json','r') as file:
+            data = json. load(file)
+
+        print(tabulate(data,headers="keys", tablefmt="grid"))
+        back = input(
+                "¿Deseas vover?(s/n)"
+                )
+        if back.lower() == "s":
+                break #se regresa
+        else:
+             continue
+                
+def tableMusic():
+    while(True):
+        with open('data/musics.json','r') as file:
+            data = json. load(file)
+
+        print(tabulate(data,headers="keys", tablefmt="grid"))
+        back = input(
+                "¿Deseas continuar obserbando la tabla?(s/n)"
+                )
+        if back.lower() == "s":
+                break #se regresa
+        else:
+             continue
+                

@@ -1,21 +1,21 @@
 from design.allMenus import addNewElementMenu, SeeAllItems, SearhElement, EditElement, deletElement, seeByCategory, saveAndLoadCollecton 
 from logic.addMultimedia import dateBooks, dateMovies, dateMusic
-from design.table import tableBooks
+from design.table import tableBooks,tableMovies, tableMusic
 while(True):
     print("""
-    ===========================================
-            Administrador de Colección
-    ===========================================
-    1. Añadir un Nuevo Elemento
-    2. Ver Todos los Elementos
-    3. Buscar un Elemento
-    4. Editar un Elemento
-    5. Eliminar un Elemento
-    6. Ver Elementos por Categoría
-    7. Guardar y Cargar Colección
-    8. Salir
-    ===========================================
-    Selecciona una opción (1-8): """)
+===========================================
+        Administrador de Colección
+===========================================
+1. Añadir un Nuevo Elemento
+ 2. Ver Todos los Elementos
+3. Buscar un Elemento
+4. Editar un Elemento
+5. Eliminar un Elemento
+6. Ver Elementos por Categoría
+7. Guardar y Cargar Colección
+8. Salir
+===========================================
+Selecciona una opción (1-8): """)
 
     opc = int(input())
 
@@ -28,6 +28,8 @@ while(True):
                     dateMovies()
                 case 3:
                     dateMusic()
+                case 4:
+                    break
             back = input(
                 "¿Deseas continuar en el menu de añadir un nuevo elemento?(s/n)"
                 )
@@ -36,9 +38,24 @@ while(True):
             else:
                 break
     elif opc == 2 :
-        match SeeAllItems():
-            case 1:
-               tableBooks()
+        while(True):
+            match SeeAllItems():
+                case 1:
+                    tableBooks()
+                case 2:
+                    tableMovies()
+                case 3:
+                    tableMusic()
+                case 4:
+                    break
+            back = input(
+                "¿Deseas continuar en el menu de Ver Todos los Elementos o desea regresar al menu prinsipal?(s = menu de las tablas/ n = volver al menu principal)"
+                )
+            if back.lower() == "s":
+                continue #se queda en el menu
+            else:
+                break
+
     elif opc == 3 :
         match SearhElement():
             case 1:
