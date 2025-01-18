@@ -1,14 +1,14 @@
 from design.allMenus import addNewElementMenu, SeeAllItems, SearhElement, EditElement, deletElement, seeByCategory, saveAndLoadCollecton 
 from logic.addMultimedia import dateBooks, dateMovies, dateMusic
 from design.table import tableBooks,tableMovies, tableMusic
-from design.searhItem import searhBook
+from design.searhItem import searchByTitle, searchByADA, searchBygener
 while(True):
     print("""
 ===========================================
         Administrador de Colección
 ===========================================
 1. Añadir un Nuevo Elemento
- 2. Ver Todos los Elementos
+2. Ver Todos los Elementos
 3. Buscar un Elemento
 4. Editar un Elemento
 5. Eliminar un Elemento
@@ -31,6 +31,8 @@ Selecciona una opción (1-8): """)
                     dateMusic()
                 case 4:
                     break
+                case _:
+                    print("no seas pendejo")
             back = input(
                 "¿Deseas continuar en el menu de añadir un nuevo elemento?(s/n)"
                 )
@@ -49,6 +51,8 @@ Selecciona una opción (1-8): """)
                     tableMusic()
                 case 4:
                     break
+                case _:
+                    print("._.")
             back = input(
                 "¿Deseas continuar en el menu de Ver Todos los Elementos o desea regresar al menu prinsipal?(s = menu de las tablas/ n = volver al menu principal)"
                 )
@@ -61,7 +65,23 @@ Selecciona una opción (1-8): """)
         while(True):
             match SearhElement():
                 case 1:
-                    searhBook()
+                    searchByTitle()
+                case 2:
+                    searchByADA()
+                case 3:
+                    searchBygener()
+                case 4:
+                    break
+                case _:
+                    print("¿🧠n't?")
+            back = input(
+                "¿Deseas continuar en el menu de Ver Todos los Elementos o desea regresar al menu prinsipal?(s = menu de las tablas/ n = volver al menu principal)"
+                )
+            if back.lower() == "s":
+                continue #se queda en el menu
+            else:
+                break
+                    
     elif opc == 4 :
         match EditElement():
             case 1:
