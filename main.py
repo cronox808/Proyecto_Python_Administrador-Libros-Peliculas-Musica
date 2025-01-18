@@ -2,6 +2,7 @@ from design.allMenus import addNewElementMenu, SeeAllItems, SearhElement, EditEl
 from logic.addMultimedia import dateBooks, dateMovies, dateMusic
 from design.table import tableBooks,tableMovies, tableMusic
 from design.searhItem import searchByTitle, searchByADA, searchBygener
+from logic.editElemet import editTitle
 while(True):
     print("""
 ===========================================
@@ -85,8 +86,7 @@ Selecciona una opción (1-8): """)
     elif opc == 4 :
         match EditElement():
             case 1:
-                print("editar titulo")
-
+                editTitle()
     elif opc == 5 :
         match deletElement():
             case 1:
