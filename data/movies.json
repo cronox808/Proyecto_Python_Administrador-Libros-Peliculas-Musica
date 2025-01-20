@@ -14,13 +14,6 @@
         "valoracion": 4.9
     },
     {
-        "id": 3,
-        "titulo": "avengers",
-        "director": "marvel",
-        "genero": "accion",
-        "valoracion": 5.0
-    },
-    {
         "id": 4,
         "titulo": "sonic",
         "director": "soni",

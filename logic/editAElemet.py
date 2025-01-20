@@ -226,10 +226,10 @@ def editgener():
                 with open(ruta_archivo, 'r') as file:
                     data = json.load(file)
                     for item in data:
-                        titulos.append({'archivo': archivo, 'titulo':item['titulo'], 'valoracion': item['genero']})
+                        titulos.append({'archivo': archivo, 'titulo':item['titulo'], 'genero': item['genero']})
 
         # Mostrar la tabla con títulos y su índice (empezando desde 1)
-        print("Valoraciones disponibles:")
+        print("Generos disponibles:")
         tabla = []
         for i, t in enumerate(titulos, start=1):
             tabla.append([i, t['archivo'],t['titulo'], t['genero']])
