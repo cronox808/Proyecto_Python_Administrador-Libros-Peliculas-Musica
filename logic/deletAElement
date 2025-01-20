@@ -1,0 +1,19 @@
+import json
+import os
+from tabulate import tabulate
+def deletBooks():
+    books = json.load(open(os.path.join('data', 'books.json'), "r", encoding="utf-8"))
+    movies = json.load(open(os.path.join('data', 'movies.json'), "r", encoding="utf-8"))
+    musics = json.load(open(os.path.join('data', 'musics.json'), "r", encoding="utf-8"))
+
+    allTitulos = []
+    for item in books:
+        allTitulos.append({"titulo": item["titulo"], "origen": "libros"})
+    for item in movies:
+        allTitulos.append({"titulo": item["titulo"], "origen": "peliculas"})
+    for item in musics:
+        allTitulos.append({"titulo": item["titulo"], "origen": "musica"})
+
+    print("\ntodos los titulos disponibles: ")
+    headers = ["#" "titulo", "origen"]
+    table = [[]]

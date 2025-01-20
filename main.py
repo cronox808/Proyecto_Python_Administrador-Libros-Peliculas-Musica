@@ -2,7 +2,7 @@ from design.allMenus import addNewElementMenu, SeeAllItems, SearhElement, EditEl
 from logic.addMultimedia import dateBooks, dateMovies, dateMusic
 from design.table import tableBooks,tableMovies, tableMusic
 from design.searhItem import searchByTitle, searchByADA, searchBygener
-from logic.editElemet import editTitle, editADA, editValoracion, editgener
+from logic.editAElemet import editTitle, editADA, editValoracion, editgener
 while(True):
     print("""
 ===========================================
@@ -98,6 +98,13 @@ Selecciona una opción (1-8): """)
                     break
                 case _:
                     print("ke? o_0")
+            back = input(
+                "¿Deseas continuar en el menu de Ver Todos los Elementos o desea regresar al menu prinsipal?(s = menu de las tablas/ n = volver al menu principal)"
+                )
+            if back.lower() == "s":
+                continue #se queda en el menu
+            else:
+                break
     elif opc == 5 :
         match deletElement():
             case 1:

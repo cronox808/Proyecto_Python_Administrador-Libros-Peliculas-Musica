@@ -1,29 +1,34 @@
 [
     {
+        "id": 1,
         "titulo": "El Padrino",
         "director": "Francis Ford Coppola",
         "genero": "Drama/Crimen",
         "valoracion": 4.8
     },
     {
+        "id": 2,
         "titulo": "Parasitos",
         "director": "Bong Joon-ho",
         "genero": "Thriller/Drama",
         "valoracion": 4.9
     },
     {
+        "id": 3,
         "titulo": "avengers",
         "director": "marvel",
         "genero": "accion",
         "valoracion": 5.0
     },
     {
+        "id": 4,
         "titulo": "sonic",
         "director": "soni",
         "genero": "infantil",
         "valoracion": 5.0
     },
     {
+        "id": 5,
         "titulo": "transformer",
         "director": "sdsd",
         "genero": "accion",

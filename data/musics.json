@@ -1,23 +1,27 @@
 [
     {
+        "id": 1,
         "titulo": "Thriller",
         "artista": "Michael Jackson",
         "genero": "Pop",
         "valoracion": 5
     },
     {
+        "id": 2,
         "titulo": "Bohemian Rhapsody",
         "artista": "Queen",
         "genero": "Rock",
         "valoracion": 4.9
     },
     {
+        "id": 3,
         "titulo": "operation evolution",
         "artista": "dimrain47",
         "genero": "dustep",
         "valoracion": 5.0
     },
     {
+        "id": 4,
         "titulo": "angst",
         "artista": "ramnstain",
         "genero": "metal industria",

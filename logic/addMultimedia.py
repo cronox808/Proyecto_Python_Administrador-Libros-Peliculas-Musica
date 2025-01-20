@@ -12,8 +12,13 @@ def dateBooks():
         genero = input("Introduce el genero del libro: ")
         valoracion = input("Introduce la valoracion del libro: ")
         valoracion = float(valoracion) if valoracion.strip() else None
+
+# Determinar el próximo ID (si la lista de libros no está vacía, obtenemos el último ID)ç
+        next_id = book[-1]['id'] + 1 if book else 1 
+
      #crear un diccionario para la pelicula
         NewBook = {
+        "id": next_id,
         "titulo": titulo,
         "autor": autor,
         "genero": genero,
@@ -42,8 +47,10 @@ def dateMovies():
         genero = input("Introduce el genero de la pelicula: ")
         valoracion = input("Introduce la valoracion de la pelicula: ")
         valoracion = float(valoracion) if valoracion.strip() else None
+        next_id = movie[-1]['id'] + 1 if movie else 1 
      #crear un diccionario para la pelicula
         NewMovie = {
+        "id": next_id,
         "titulo": titulo,
         "director": director,
         "genero": genero,
@@ -71,8 +78,10 @@ def dateMusic():
         genero = input("Introduce el genero de la cancion: ")
         valoracion = input("Introduce la valoracion de la cancion: ")
         valoracion = float(valoracion) if valoracion.strip() else None
+        next_id = music[-1]['id'] + 1 if music else 1 
      #crear un diccionario para la pelicula
         NewMusic = {
+        "id": next_id,
         "titulo": titulo,
         "artista": artista,
         "genero": genero,
