@@ -19,14 +19,14 @@
     },
     {
         "titulo": "sonic",
-        "director": "no c",
+        "director": "soni",
         "genero": "infantil",
         "valoracion": 5.0
     },
     {
         "titulo": "transformer",
-        "director": "no c",
+        "director": "sdsd",
         "genero": "accion",
-        "valoracion": 3.0
+        "valoracion": "5"
     }
 ]

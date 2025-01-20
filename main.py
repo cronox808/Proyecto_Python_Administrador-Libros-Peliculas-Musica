@@ -2,7 +2,7 @@ from design.allMenus import addNewElementMenu, SeeAllItems, SearhElement, EditEl
 from logic.addMultimedia import dateBooks, dateMovies, dateMusic
 from design.table import tableBooks,tableMovies, tableMusic
 from design.searhItem import searchByTitle, searchByADA, searchBygener
-from logic.editElemet import editTitle
+from logic.editElemet import editTitle, editADA, editValoracion, editgener
 while(True):
     print("""
 ===========================================
@@ -84,9 +84,20 @@ Selecciona una opción (1-8): """)
                 break
                     
     elif opc == 4 :
-        match EditElement():
-            case 1:
-                editTitle()
+        while True:
+            match EditElement():
+                case 1:
+                    editTitle()
+                case 2:
+                    editADA()
+                case 3:
+                    editgener()
+                case 4:
+                    editValoracion()
+                case 5:
+                    break
+                case _:
+                    print("ke? o_0")
     elif opc == 5 :
         match deletElement():
             case 1:
