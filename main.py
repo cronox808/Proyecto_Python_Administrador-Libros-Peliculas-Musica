@@ -3,6 +3,8 @@ from logic.addMultimedia import dateBooks, dateMovies, dateMusic
 from design.table import tableBooks,tableMovies, tableMusic
 from design.searhItem import searchByTitle, searchByADA, searchBygener
 from logic.editAElemet import editTitle, editADA, editValoracion, editgener
+from logic.deletAElement import deletBooks, eliminar_elemento_por_id
+from logic.seeByCategory import mostrar_libros_por_categoria, mostrar_musica_por_categoria, mostrar_peliculas_por_categoria
 while(True):
     print("""
 ===========================================
@@ -33,7 +35,7 @@ Selecciona una opción (1-8): """)
                 case 4:
                     break
                 case _:
-                    print("no seas pendejo")
+                    print("opcion no valida")
             back = input(
                 "¿Deseas continuar en el menu de añadir un nuevo elemento?(s/n)"
                 )
@@ -53,9 +55,9 @@ Selecciona una opción (1-8): """)
                 case 4:
                     break
                 case _:
-                    print("._.")
+                    print("opcion no valida")
             back = input(
-                "¿Deseas continuar en el menu de Ver Todos los Elementos o desea regresar al menu prinsipal?(s = menu de las tablas/ n = volver al menu principal)"
+                "¿Deseas continuar en el menu de Ver Todos los Elementos?(s/n)"
                 )
             if back.lower() == "s":
                 continue #se queda en el menu
@@ -74,9 +76,9 @@ Selecciona una opción (1-8): """)
                 case 4:
                     break
                 case _:
-                    print("¿🧠n't?")
+                    print("opcion no valida")
             back = input(
-                "¿Deseas continuar en el menu de Ver Todos los Elementos o desea regresar al menu prinsipal?(s = menu de las tablas/ n = volver al menu principal)"
+                "¿Deseas continuar en el menu de buscar elementos?(s/n)"
                 )
             if back.lower() == "s":
                 continue #se queda en el menu
@@ -97,22 +99,44 @@ Selecciona una opción (1-8): """)
                 case 5:
                     break
                 case _:
-                    print("ke? o_0")
+                    print("opcion no valida")
             back = input(
-                "¿Deseas continuar en el menu de Ver Todos los Elementos o desea regresar al menu prinsipal?(s = menu de las tablas/ n = volver al menu principal)"
+                "¿Deseas continuar en el menu de editar elemento?(s/n)"
                 )
             if back.lower() == "s":
                 continue #se queda en el menu
             else:
                 break
     elif opc == 5 :
-        match deletElement():
-            case 1:
-                print("eliminar pedido")
+        while True:
+            match deletElement():
+                case 1:
+                    deletBooks()
+                case 2:
+                    eliminar_elemento_por_id()
+                case 3:
+                    break  
+                case _:
+                    print("opcion no valida")
+            back = input(
+                "¿Deseas continuar en el menu de eliminar elemento?(s/n)"
+                )
+            if back.lower() == "s":
+                continue #se queda en el menu
+            else:
+                break
+
     elif opc == 6 :
-        match seeByCategory():
-            case 1:
-                print("ver libros")
+        while True:
+            match seeByCategory():
+                case 1:
+                    mostrar_libros_por_categoria()
+                case 2:
+                    mostrar_peliculas_por_categoria()
+                case 3:
+                    mostrar_musica_por_categoria()
+                case _:
+                    break
     elif opc == 7 :
         match saveAndLoadCollecton():
             case 1:
@@ -121,7 +145,7 @@ Selecciona una opción (1-8): """)
         print("chao")
         break
     else:
-        print("¿eres tonto?") 
+        print("opcion no valida") 
 
 
 

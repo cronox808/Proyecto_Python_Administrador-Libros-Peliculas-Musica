@@ -5,12 +5,5 @@
         "autor": "Gabriel García Márquez",
         "genero": "Realismo mágico",
         "valoracion": 5
-    },
-    {
-        "id": 2,
-        "titulo": "1984",
-        "autor": "George Orwell",
-        "genero": "accion",
-        "valoracion": "5"
     }
 ]
